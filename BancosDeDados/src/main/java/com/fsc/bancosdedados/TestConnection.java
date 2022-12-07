@@ -12,19 +12,28 @@ import java.sql.SQLException;
  *
  * @author Fernando Correa
  */
-public class TesteConnectionMysql {
-    
+public class TestConnection {
+ 
     public static void main(String[] args) throws SQLException {
         
-        String url = "jdbc:mysql://localhost:3306";
-        String user = "root";
-        String password = "";
+        final String url = "jdbc:mysql://localhost:3306";
+        final String user = "root";
+        final String pass = "";
         
-        Connection c1 = DriverManager.getConnection(url, user, password);
+        Connection c1 = DriverManager.getConnection(url, user, pass);
+        
+        System.out.println("Conexão efetuada com sucesso!!!!");
+        
+        c1.close();
         
         
-        System.out.println("Conexão estabelecida com sucesso, siga o nosso canal");
+        
+        
+        
+        
         
     }
+    
+    
     
 }
